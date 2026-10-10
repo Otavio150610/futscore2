@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brasileirão Hub: classificação, partidas e artilharia das Séries A e B.">
+  <title>Brasileirão Hub | Futebol em números</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Brasileirão Hub - início">
+      <span class="brand-mark">FS</span>
+      <span>Fut<span class="brand-light">Score</span></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="main-nav" aria-label="Navegação principal">
+      <a class="nav-link active" href="index.html">Início</a>
+      <a class="nav-link" href="pages/classificacao.html">Classificação</a>
+      <a class="nav-link" href="pages/partidas.html">Partidas</a>
+      <a class="nav-link" href="pages/artilharia.html">Artilharia</a>
+    </nav>
+    <button class="login-button" id="open-login">Entrar <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> FUTEBOL BRASILEIRO, SEM COMPLICAÇÃO</p>
+        <h1>Os números do<br><span>nosso futebol.</span></h1>
+        <p class="hero-description">Acompanhe classificação, resultados e artilharia das Séries A e B em um só lugar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="pages/classificacao.html">Ver classificação <span>→</span></a>
+          <a class="button button-ghost" href="pages/partidas.html">Explorar partidas</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top"><span>DESTAQUE DA TEMPORADA</span><span class="season-tag">2026*</span></div>
+        <div class="versus">
+          <div class="club"><span class="club-badge badge-flamengo">FLA</span><strong>Flamengo</strong></div>
+          <div class="score"><span>2</span><i>:</i><span>1</span></div>
+          <div class="club"><span class="club-badge badge-palmeiras">PAL</span><strong>Palmeiras</strong></div>
+        </div>
+        <div class="match-status"><span class="status-dot"></span> Exemplo de placar</div>
+        <div class="hero-stats">
+          <div><strong>20</strong><span>Clubes por série</span></div>
+          <div><strong>38</strong><span>Rodadas</span></div>
+          <div><strong>2</strong><span>Divisões</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">ACOMPANHE DE PERTO</p><h2>Escolha sua competição</h2></div>
+        <span class="section-note">Temporada demonstrativa*</span>
+      </div>
+      <div class="league-grid">
+        <a class="league-card league-a" href="pages/classificacao.html?serie=A">
+          <div class="league-icon">A</div><div><span class="league-label">CAMPEONATO BRASILEIRO</span><h3>Série A</h3><p>Elite do futebol nacional</p></div><span class="card-arrow">↗</span>
+        </a>
+        <a class="league-card league-b" href="pages/classificacao.html?serie=B">
+          <div class="league-icon">B</div><div><span class="league-label">CAMPEONATO BRASILEIRO</span><h3>Série B</h3><p>Disputa pelo acesso</p></div><span class="card-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section home-bottom">
+      <div class="section-heading"><div><p class="eyebrow">DADOS EM DESTAQUE</p><h2>Veja o que está acontecendo</h2></div></div>
+      <div class="feature-grid">
+        <a class="feature-card" href="pages/classificacao.html"><span class="feature-icon">▤</span><h3>Classificação</h3><p>Pontos, vitórias, saldo de gols e posição de cada clube.</p><span class="feature-link">Ver tabela →</span></a>
+        <a class="feature-card" href="pages/partidas.html"><span class="feature-icon">◷</span><h3>Partidas</h3><p>Consulte placares de exemplo e a agenda demonstrativa.</p><span class="feature-link">Ver partidas →</span></a>
+        <a class="feature-card" href="pages/artilharia.html"><span class="feature-icon">⚽</span><h3>Artilharia</h3><p>Confira os goleadores em uma tabela fácil de consultar.</p><span class="feature-link">Ver artilharia →</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">BH</span><span>BRASILEIRÃO<span class="brand-light"> HUB</span></span></a><p>Projeto independente de estudo. Não é afiliado à CBF ou aos clubes.</p><p>© 2026 Brasileirão Hub</p></footer>
+
+  <dialog class="login-dialog" id="login-dialog">
+    <form method="dialog" class="dialog-close-row"><button class="icon-button" aria-label="Fechar">✕</button></form>
+    <div class="login-heading"><span class="brand-mark">BH</span><p class="eyebrow">ÁREA DO TORCEDOR</p><h2>Entre na sua conta</h2><p>Esta é uma demonstração visual de login.</p></div>
+    <form id="login-form" class="login-form">
+      <label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="voce@email.com" required>
+      <label for="password">Senha</label><input id="password" name="password" type="password" placeholder="Digite sua senha" minlength="6" required>
+      <button class="button button-primary full-width" type="submit">Entrar</button>
+      <p class="form-message" id="login-message" role="status"></p>
+      <p class="login-warning">Não use uma senha real. Este formulário não cria contas nem envia dados.</p>
+    </form>
+  </dialog>
+</body>
+</html>
